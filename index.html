@@ -10,7 +10,122 @@
 :root{--wine:#97002b;--wine2:#6f001d;--green:#063d35;--gold:#bd8a3a;--cream:#fff8eb;--ink:#17130f;--line:#dec7a1;--shadow:0 18px 50px rgba(54,25,12,.15)}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--ink);background:var(--cream);font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}a{text-decoration:none;color:inherit}.serif{font-family:Georgia,"Times New Roman",serif}.wrap{width:min(1180px,calc(100% - 34px));margin:auto}.btn{min-height:50px;display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:0 22px;border-radius:8px;font-size:13px;font-weight:800;letter-spacing:.03em;border:1px solid transparent}.primary{background:linear-gradient(135deg,var(--wine),#c20b3d);color:#fff}.outline{border-color:#6f001d;background:rgba(255,248,235,.9)}
 .top{position:absolute;z-index:5;top:0;left:0;right:0;padding:18px 0;color:#fff}.nav{display:flex;align-items:center;justify-content:space-between}.brand{font-family:Georgia,serif;font-size:20px;font-weight:700;letter-spacing:.03em}.brand span{font-family:Inter,sans-serif;font-size:12px;border-left:1px solid rgba(255,255,255,.65);padding-left:10px;margin-left:8px}.nav-actions{display:flex;gap:10px}.nav .btn{min-height:42px;background:#fff;color:#15100d}.nav .primary{background:var(--wine);color:#fff}
-.hero{position:relative;min-height:720px;display:flex;align-items:center;overflow:hidden;background:url('./images/banner_imp.png') center/cover}.hero:before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(65,15,6,.35),transparent 18%,transparent 80%,rgba(73,24,8,.12))}.hero-inner{position:relative;z-index:2;padding-top:78px}.eyebrow{font:700 25px/1.1 Georgia,serif;color:var(--wine);letter-spacing:.06em}.hero h1{margin:8px 0 8px;font:500 clamp(46px,7vw,88px)/.87 Georgia,serif;color:var(--wine);letter-spacing:-.04em}.hero h2{font:500 clamp(30px,4vw,56px)/1 Georgia,serif;margin:24px 0 12px}.lead{font:500 clamp(19px,2vw,27px)/1.2 Georgia,serif;max-width:650px}.sub{max-width:650px;font-size:16px;line-height:1.6}.cities-line{margin:20px 0;font-weight:800;font-size:13px;letter-spacing:.03em}.event{display:flex;gap:24px;align-items:center;margin:22px 0}.event strong{font:600 20px/1.2 Georgia,serif}.event-item{display:flex;gap:10px;align-items:center}.event-item+.event-item{border-left:1px solid #a98765;padding-left:24px}.ico{font-size:23px;color:var(--wine)}.actions{display:flex;gap:12px;flex-wrap:wrap}
+/* .hero{position:relative;height: auto; min-height:720px;display:flex;align-items:center;overflow:hidden;background:url('./images/banner_imp.png') center/cover} */
+.hero {
+    position: relative;
+    width: 100%;
+    min-height: 720px;
+
+    display: flex;
+    align-items: center;
+
+    overflow: hidden;
+
+    background-image: url('./images/banner_imp.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+
+/* ================================
+   LARGE DESKTOP
+================================ */
+@media (min-width: 1200px) {
+
+    .hero {
+        min-height: 760px;
+
+        background-size: cover;
+        background-position: center center;
+    }
+
+}
+
+
+/* ================================
+   LAPTOP / DESKTOP
+================================ */
+@media (min-width: 992px) and (max-width: 1199px) {
+
+    .hero {
+        min-height: 700px;
+
+        background-size: cover;
+        background-position: center center;
+    }
+
+}
+
+
+/* ================================
+   TABLET
+================================ */
+@media (min-width: 768px) and (max-width: 991px) {
+
+    .hero {
+        min-height: 650px;
+
+        background-size: cover;
+
+        /*
+         * Slightly move image toward right
+         */
+        background-position: 55% center;
+    }
+
+}
+
+
+/* ================================
+   MOBILE
+================================ */
+@media (max-width: 767px) {
+
+    .hero {
+        min-height: 700px;
+
+        background-size: cover;
+
+        /*
+         * Mobile screens are much narrower,
+         * so adjust horizontal crop.
+         */
+        background-position: 65% center;
+    }
+
+}
+
+
+/* ================================
+   SMALL MOBILE
+================================ */
+@media (max-width: 575px) {
+
+    .hero {
+        min-height: 680px;
+
+        background-size: cover;
+        background-position: 68% center;
+    }
+
+}
+
+
+/* ================================
+   VERY SMALL MOBILE
+================================ */
+@media (max-width: 380px) {
+
+    .hero {
+        min-height: 650px;
+
+        background-size: cover;
+        background-position: 70% center;
+    }
+
+}
+/* .hero:before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(65,15,6,.35),transparent 18%,transparent 80%,rgba(73,24,8,.12))}.hero-inner{position:relative;z-index:2;padding-top:78px}.eyebrow{font:700 25px/1.1 Georgia,serif;color:var(--wine);letter-spacing:.06em}.hero h1{margin:8px 0 8px;font:500 clamp(46px,7vw,88px)/.87 Georgia,serif;color:var(--wine);letter-spacing:-.04em}.hero h2{font:500 clamp(30px,4vw,56px)/1 Georgia,serif;margin:24px 0 12px}.lead{font:500 clamp(19px,2vw,27px)/1.2 Georgia,serif;max-width:650px}.sub{max-width:650px;font-size:16px;line-height:1.6}.cities-line{margin:20px 0;font-weight:800;font-size:13px;letter-spacing:.03em}.event{display:flex;gap:24px;align-items:center;margin:22px 0}.event strong{font:600 20px/1.2 Georgia,serif}.event-item{display:flex;gap:10px;align-items:center}.event-item+.event-item{border-left:1px solid #a98765;padding-left:24px}.ico{font-size:23px;color:var(--wine)}.actions{display:flex;gap:12px;flex-wrap:wrap} */
 .pattern{background-image:radial-gradient(circle at 20px 20px,rgba(151,0,43,.045) 2px,transparent 2px);background-size:40px 40px}.section{padding:72px 0}.center{text-align:center}.kicker{font:600 22px Georgia,serif}.title{font:500 clamp(34px,5vw,58px)/.98 Georgia,serif;color:var(--wine);margin:5px 0 14px}.desc{max-width:710px;margin:0 auto 34px;line-height:1.6;color:#544a42}.city-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:12px}.city{position:relative;aspect-ratio:.72;border-radius:10px;overflow:hidden;box-shadow:var(--shadow);background:#c20b3d}.city img{width:100%;height:100%;object-fit:cover;background:#0b3d34}.city img[src=""]{display:none}.city:after{content:"";position:absolute;inset:35% 0 0;background: linear-gradient(
     to bottom,
     transparent 0%,
@@ -645,8 +760,7 @@
 <!-- <header class="top"><div class="wrap nav"><div class="brand"><img src="./images/unnamed-removebg-preview.png"  style="width: 200px;"/></div><div class="nav-actions"></div></div></header> -->
 <main>
 <section class="hero">
-    <!-- <div class="wrap hero-inner"><div class="eyebrow">KHAMMA GHANI,</div><h1>JAIPUR!</h1><h2>GODREJ PROPERTIES<br>HOME FEST 2026</h2><div class="lead">Why Travel Across India,<br>When India’s Finest Homes Are Coming to You?</div><p class="sub">Godrej Properties across India — all under one roof in Jaipur.</p><div class="cities-line">MUMBAI &nbsp;•&nbsp; BENGALURU &nbsp;•&nbsp; DELHI NCR &nbsp;•&nbsp; PUNE &nbsp;•&nbsp; HYDERABAD &nbsp;•&nbsp; & MORE</div><div class="event"><div class="event-item"><span class="ico">▣</span><strong>17th & 18th<br>October 2026</strong></div><div class="event-item"><span class="ico">●</span><strong>Marriott, Jaipur</strong></div></div><div class="actions"><a class="btn primary homefest-open">REGISTER YOUR INTEREST →</a><a href="tel:+917090158000" class="btn outline">☎ CALL 7090158000</a></div></div> -->
-</section>
+   </section>
 <section class="section pattern"><div class="wrap center"><div class="kicker">INDIA’S FINEST HOMES.</div><h2 class="title">NOW COMING TO JAIPUR.</h2><p class="desc">Explore residential opportunities from some of India’s leading cities at one exclusive event in Jaipur.</p><div class="city-grid">
 <div class="city homefest-open"><img loading="lazy" src="./images/mumbai.jpg" alt="Mumbai city"><div class="city-copy"><b>MUMBAI</b></div></div>
 <div class="city homefest-open"><img loading="lazy" src="./images/bangalore.jpg" alt="Bengaluru city"><div class="city-copy"><b>BENGALURU</b></div></div>
